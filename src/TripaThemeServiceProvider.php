@@ -34,6 +34,10 @@ class TripaThemeServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/assets' => public_path('vendor/tripa-theme'),
             ], 'assets');
 
+            $this->publishes([
+                __DIR__.'/../resources/kickstart' => resource_path('views/kickstart-example'),
+            ], 'assets');
+
             // Publishing the translation files.
             /*$this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/tripa-theme'),

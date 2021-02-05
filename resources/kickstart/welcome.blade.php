@@ -1,0 +1,10 @@
+@extends('tripa-theme::backend')
+@section('header-menu')
+    header
+@endsection
+@section('sidebar')
+   @include('layout.partials.sidebar')
+@endsection
+@section('content')
+    Content
+@endsection

@@ -1,9 +1,4 @@
-# Very short description of the package
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gerbesf/tripa-theme.svg?style=flat-square)](https://packagist.org/packages/gerbesf/tripa-theme)
-[![Build Status](https://img.shields.io/travis/gerbesf/tripa-theme/master.svg?style=flat-square)](https://travis-ci.org/gerbesf/tripa-theme)
-[![Quality Score](https://img.shields.io/scrutinizer/g/gerbesf/tripa-theme.svg?style=flat-square)](https://scrutinizer-ci.com/g/gerbesf/tripa-theme)
-[![Total Downloads](https://img.shields.io/packagist/dt/gerbesf/tripa-theme.svg?style=flat-square)](https://packagist.org/packages/gerbesf/tripa-theme)
+# T-theme
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -15,10 +10,38 @@ You can install the package via composer:
 composer require gerbesf/tripa-theme
 ```
 
-## Usage
+### DEV MOD
+composer.json
+```
+ "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Gerbesf\\TripaTheme\\": "packages/gerbesf/tripa-theme/src/",
+            ...
+        }
+    },
+```
+
+### Production mode
+composer.json
+```
+     "repositories":[
+         {
+             "type": "vcs",
+             "url": "https://github.com/gerbesf/tripa-theme.git"
+         }
+     ]
+```
+
+``` bash
+composer install
+```
+
+
+## Publish
 
 ``` php
-// Usage description here
+php artisan vendor:publish --provider="Gerbesf\TripaTheme\TripaThemeServiceProvider"
 ```
 
 ### Testing
