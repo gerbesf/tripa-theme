@@ -9,7 +9,7 @@
     <link href="{{ asset('vendor/tripa-theme/css/app.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/lib/vanilla-masker.js"></script>
-    <livewire:styles />
+    @livewireStyles
 </head>
 <body>
 <div id="app" class="app app-xsidebar-minified">
@@ -48,7 +48,7 @@
 
 <script src="{{ asset('vendor/tripa-theme//js/app.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<livewire:scripts />
+@livewireScripts
 @yield('js-footer')
 </body>
 </html>
