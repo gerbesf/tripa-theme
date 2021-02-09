@@ -19,7 +19,7 @@
         <a href="{{ route('admin_index') }}" class="brand-logo">
             <img src="{{asset('vendor/tripa-theme/img/logo.png')}}" alt="" height="20" />
         </a>
-        @env('local')<span class="pr-lg-3">DEV</span>@endenv
+        @env('local')<span class="pr-lg-3">{{ env('APP_VERSION') }}D</span>@endenv
         @production<span class="pr-lg-3">{{ env('APP_VERSION') }}</span>@endproduction
     </div>
 
@@ -35,12 +35,13 @@
                         <i class="fa fa-user fa-2x mb-n3"></i>
                     </div>
                 </div>
-                <div class="menu-text">Gerbes M</div>
+                <div class="menu-text">{{ \Tripa::getUserName() }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right mr-lg-3">
-                <a class="dropdown-item d-flex align-items-center" href="#">Setting <i class="fa fa-wrench fa-fw ml-auto text-gray-400 f-s-16"></i></a>
+                @yield('header-usermenu')
+                <a class="dropdown-item d-flex align-items-center" href="{{ env('URL_AUTH') }}/my-account">Minha conta <i class="fa fa-wrench fa-fw ml-auto text-gray-400 f-s-16"></i></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item d-flex align-items-center" href="#">Log Out <i class="fa fa-toggle-off fa-fw ml-auto text-gray-400 f-s-16"></i></a>
+                <a class="dropdown-item d-flex align-items-center" href="/logout">Sair<i class="fa fa-toggle-off fa-fw ml-auto text-gray-400 f-s-16"></i></a>
             </div>
         </div>
     </div>

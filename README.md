@@ -44,33 +44,18 @@ composer install
 php artisan vendor:publish --provider="Gerbesf\TripaTheme\TripaThemeServiceProvider"
 ```
 
-### Testing
 
-``` bash
-composer test
+## config/app.php
+
+
+``` php
+    // Provider
+    App\Providers\RouteServiceProvider::class,
+    
+    // Facade
+    'Tripa'=> \Gerbesf\TripaTheme\TripaThemeFacade::class
 ```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email gerbes.matos@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 - [Gerbes Matos](https://github.com/gerbesf)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
