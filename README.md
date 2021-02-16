@@ -50,7 +50,7 @@ php artisan vendor:publish --provider="Gerbesf\TripaTheme\TripaThemeServiceProvi
 
 ``` php
     // Provider
-    App\Providers\RouteServiceProvider::class,
+    \Gerbesf\TripaTheme\TripaThemeServiceProvider::class
     
     // Facade
     'Tripa'=> \Gerbesf\TripaTheme\TripaThemeFacade::class
