@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{{ env('APP_NAME') }} | {{ env('APP_VERSION') }}</title>
+    <title>{{ env('APP_NAME') }} @if (trim($__env->yieldContent('page_title')))  -   @yield('page_title')   @endif</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />

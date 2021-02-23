@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{{ env('APP_NAME') }} | {{ env('APP_VERSION') }}</title>
+    <title>{{ env('APP_NAME') }} @if (trim($__env->yieldContent('page_title')))  -   @yield('page_title')   @endif</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link href="{{ asset('vendor/tripa-theme/css/app.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    @yield('css-header')
     <script src="https://cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/lib/vanilla-masker.js"></script>
     @livewireStyles
+    @yield('js-header')
 </head>
 <body>
 <div id="app" class="app app-xsidebar-minified">
@@ -36,11 +38,11 @@
 
     </div>
     @if(env('COPYRIGHT'))
-    <div id="app" class="app app-footer-fixed">
-        <div id="footer" class="app-footer">
-            {{ env('APP_COPYRIGHT') }}
+        <div id="app" class="app app-footer-fixed">
+            <div id="footer" class="app-footer">
+                {{ env('APP_COPYRIGHT') }}
+            </div>
         </div>
-    </div>
     @endif
 
     <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>

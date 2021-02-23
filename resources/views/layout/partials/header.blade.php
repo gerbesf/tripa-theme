@@ -6,7 +6,6 @@
             <span class="bar"></span>
         </button>
     </div>
-
     <div class="brand">
         <div class="desktop-toggler">
             <button type="button" class="menu-toggler" data-toggle="sidebar-minify">
@@ -14,24 +13,17 @@
                 <span class="bar"></span>
             </button>
         </div>
-
-
-
         <a href="{{ route('admin_index') }}" class="brand-logo">
-
             @if (trim($__env->yieldContent('header-logo')))
                 @yield('header-logo')
             @else
                 <img src="{{asset('vendor/tripa-theme/img/logo.png')}}" alt="" height="20" />
             @endif
-
         </a>
         @env('local')<span class="pr-lg-3">{{ env('APP_VERSION') }}D</span>@endenv
         @production<span class="pr-lg-3">{{ env('APP_VERSION') }}</span>@endproduction
     </div>
-
     <div class="menu">
-
         <div class="menu-search" >
             @yield('header-menu')
         </div>
