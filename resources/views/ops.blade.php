@@ -9,6 +9,8 @@
                 <p class="lead">{{ $description }}</p>
             @endif
 
+            <a href="{{ env('URL_AUTH') ?: '#' }}">Início</a>
+
         </div>
     </div>
 @endsection
