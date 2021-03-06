@@ -20,13 +20,14 @@
                 <img src="{{asset('vendor/tripa-theme/img/logo.png')}}" alt="" height="20" />
             @endif
         </a>
-        @env('local')<span class="pr-lg-3">{{ env('APP_VERSION') }}D</span>@endenv
+        @env('local')<span class="pr-lg-3">{{ env('APP_VERSION') }}-DEV</span>@endenv
         @production<span class="pr-lg-3">{{ env('APP_VERSION') }}</span>@endproduction
     </div>
     <div class="menu">
         <div class="menu-search" >
             @yield('header-menu')
         </div>
+        @yield('header-dropdown')
         <div class="menu-item dropdown ">
             <a href="#" data-toggle="dropdown" data-display="static" class="menu-link">
                 <div class="menu-img online">
