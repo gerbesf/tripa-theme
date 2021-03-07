@@ -37,13 +37,12 @@
         @yield('content')
 
     </div>
-    @if(env('COPYRIGHT'))
-        <div id="app" class="app app-footer-fixed">
-            <div id="footer" class="app-footer">
-                {{ env('APP_COPYRIGHT') }}
-            </div>
-        </div>
-    @endif
+
+    <div id="footer" class="app-footer text-muted">
+        {{ env('APP_NAME') }}
+        @env('local')<span class="pr-lg-3">{{ env('APP_VERSION') }} - Versão de desenvolvimento</span>@endenv
+        @production<span class="pr-lg-3">{{ env('APP_VERSION') }}</span>@endproduction
+    </div>
 
     <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
 </div>
