@@ -29,8 +29,10 @@
         <div class="menu-item dropdown ">
             <a href="#" data-toggle="dropdown" data-display="static" class="menu-link">
                 <div class="menu-img online">
-                    <div class="d-flex align-items-center justify-content-center w-100 h-100 bg-gray-800 text-gray-300 rounded-circle overflow-hidden">
-                        <i class="fa fa-user fa-2x mb-n3"></i>
+                    <div class="menu-img online">
+                        <div class="d-flex align-items-center justify-content-center w-100 h-100 bg-gray-800 text-gray-300 rounded-circle overflow-hidden">
+                            <img src="https://ui-avatars.com/api/?background=000000&color=fff&name={{ \Tripa::getUserName() }}&font-size=0.23">
+                        </div>
                     </div>
                 </div>
                 <div class="menu-text">{{ \Tripa::getUserName() }}</div>
