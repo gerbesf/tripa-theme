@@ -48,7 +48,7 @@
 </div>
 
 <script src="{{ asset('vendor/tripa-theme//js/app.min.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}?{{ date('YmdH') }}"></script>
 @livewireScripts
 @yield('js-footer')
 </body>
