@@ -39,8 +39,6 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right mr-lg-3">
                 @yield('header-usermenu')
-                <a class="dropdown-item d-flex align-items-center" href="{{ env('URL_AUTH') }}/my-account">Minha conta <i class="fa fa-wrench fa-fw ml-auto text-gray-400 f-s-16"></i></a>
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item d-flex align-items-center" href="/logout">Sair<i class="fa fa-toggle-off fa-fw ml-auto text-gray-400 f-s-16"></i></a>
             </div>
         </div>
